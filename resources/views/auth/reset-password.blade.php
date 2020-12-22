@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-              <img src="{{ Storage::url("3206-300x300.jpg") }}"   width="100" height="100">
+              <img src="https://www.silhouette-illust.com/wp-content/uploads/2016/06/3206-300x300.jpg"   width="100" height="100">
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
