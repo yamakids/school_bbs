@@ -6,7 +6,8 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                        <!-- <x-jet-application-mark class="block h-9 w-auto" /> -->
+                        <img src="https://www.silhouette-illust.com/wp-content/uploads/2016/06/3206-300x300.jpg"   width="100" height="100" class="block h-9 w-auto">
                     </a>
                 </div>
 
