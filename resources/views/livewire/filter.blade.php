@@ -9,7 +9,7 @@
      <h5 class="card-title">{{ $search_result }}</h5>
      @endisset
      <select class="form-control"  wire:model="searchCategory">
-         <option value='' selected>選択する</option>
+         <option value="0" selected>選択する</option>
          <option value="1">1.小学校</option>
          <option value="2">2.中学校</option>
          <option value="3">3.高校</option>
