@@ -1,7 +1,7 @@
 <x-app-layout>
   <x-slot name="header">
       <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-          <a href="http://127.0.0.1:8000/dashboard">投稿一覧に戻る</a>
+          <a href="https://stark-savannah-19488.herokuapp.com/dashboard">投稿一覧に戻る</a>
       </h2>
       <link
           rel="stylesheet"
