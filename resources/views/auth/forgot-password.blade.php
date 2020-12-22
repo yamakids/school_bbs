@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <img src="{{ Storage::url(3206-300x300.jpg) }}"   width="100" height="100">
+            <img src="{{ Storage::url("3206-300x300.jpg") }}"   width="100" height="100">
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
