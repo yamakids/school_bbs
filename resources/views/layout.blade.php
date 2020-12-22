@@ -7,9 +7,9 @@
 <body>
     <header class="navbar navbar-dark bg-dark">
       <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-          <a href="http://127.0.0.1:8000/login" class="text-sm text-gray-700 underline">Login</a>
+          <a href="{{ url('/login') }}" class="text-sm text-gray-700 underline">Login</a>
 
-          <a href="http://127.0.0.1:8000/register" class="ml-4 text-sm text-gray-700 underline">Register</a>
+          <a href="{{ url('/register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
       </div>
       <link
           rel="stylesheet"
