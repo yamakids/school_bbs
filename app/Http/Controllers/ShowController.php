@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\models\Post;
+use App\Models\Post;
 
 class ShowController extends Controller
 {

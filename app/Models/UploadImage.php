@@ -13,14 +13,14 @@ class UploadImage extends Model
 
     public function post()
     {
-        return $this->belongsTo('App\models\Post');
+        return $this->belongsTo('App\Models\Post');
     }
 
     public function user(){
-        return $this->belongsTo('App\models\User');
+        return $this->belongsTo('App\Models\User');
     }
 
     public function comment(){
-        return $this->belongsTo('App\models\Comment');
+        return $this->belongsTo('App\Models\Comment');
     }
 }

@@ -17,15 +17,15 @@ class Comment extends Model
 
   public function post()
   {
-      return $this->belongsTo('App\models\Post');
+      return $this->belongsTo('App\Models\Post');
   }
 
   public function user(){
-      return $this->belongsTo('App\models\User');
+      return $this->belongsTo('App\Models\User');
   }
 
   public function upload_image(){
-   return $this->hasOne('App\models\UploadImage');
+   return $this->hasOne('App\Models\UploadImage');
  }
 
 }

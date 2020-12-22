@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\models\Post;
+use App\Models\Post;
 use App\Models\UploadImage;
 use App\Http\Requests\PostRequest;
 

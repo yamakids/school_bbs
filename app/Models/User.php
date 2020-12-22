@@ -68,21 +68,21 @@ class User extends Authenticatable implements MustVerifyEmail
 
 
    public function posts(){
-    return $this->hasMany('App\models\Post');
+    return $this->hasMany('App\Models\Post');
   }
 
 
     public function comments(){
-     return $this->hasMany('App\models\Comment');
+     return $this->hasMany('App\Models\Comment');
    }
 
    public function upload_images(){
-    return $this->hasMany('App\models\UploadImage');
+    return $this->hasMany('App\Models\UploadImage');
   }
 
   public function favorites()
     {
-        return $this->belongsToMany('App\models\Post')->withTimestamps();
+        return $this->belongsToMany('App\Models\Post')->withTimestamps();
     }
 
 }

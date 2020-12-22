@@ -17,25 +17,25 @@ class Post extends Model
    ];
 
    public function category(){
-      return $this->belongsTo('App\models\Category');
+      return $this->belongsTo('App\Models\Category');
     }
 
     public function user(){
-     return $this->belongsTo('App\models\User');
+     return $this->belongsTo('App\Models\User');
    }
 
    public function comments()
    {
-    return $this->hasMany('App\models\Comment');
+    return $this->hasMany('App\Models\Comment');
    }
 
    public function upload_image(){
-    return $this->hasOne('App\models\UploadImage');
+    return $this->hasOne('App\Models\UploadImage');
   }
 
   public function users()
     {
-        return $this->belongsToMany('App\models\User')->withTimestamps();
+        return $this->belongsToMany('App\Models\User')->withTimestamps();
     }
 
 }

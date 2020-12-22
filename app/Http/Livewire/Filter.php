@@ -6,7 +6,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\Auth;
-use App\models\Post;
+use App\Models\Post;
 
 class Filter extends Component
 {
