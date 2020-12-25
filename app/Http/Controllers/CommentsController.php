@@ -8,6 +8,7 @@ use App\Models\Post;
 use App\Models\Comment;
 use App\Models\UploadImage;
 use App\Http\Requests\CommentRequest;
+use Illuminate\Support\Facades\Storage;
 
 class CommentsController extends Controller
 {
@@ -37,9 +38,10 @@ class CommentsController extends Controller
           $upload_image = $request->file('image');
           if($upload_image) {
             //アップロードされた画像を保存する
-            $path = $upload_image->store('uploads',"public");
+            $path = Storage::disk('s3')->putFile('uploads_school',$upload_image, 'public');
             //画像の保存に成功したらDBに記録する
             if($path){
+              $path = Storage::disk('s3')->url($path);
               UploadImage::create([
                  'user_id' => $request->user_id,
                  'comment_id' => $comment_id,

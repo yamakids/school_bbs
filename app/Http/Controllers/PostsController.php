@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Post;
 use App\Models\UploadImage;
 use App\Http\Requests\PostRequest;
+use Illuminate\Support\Facades\Storage;
 
 class PostsController extends Controller
 {
@@ -41,9 +42,10 @@ class PostsController extends Controller
 
 		if($upload_image) {
 			//アップロードされた画像を保存する
-			$path = $upload_image->store('uploads',"public");
+	  	$path = Storage::disk('s3')->putFile('uploads_school',$upload_image, 'public');
 			//画像の保存に成功したらDBに記録する
 			if($path){
+        $path = Storage::disk('s3')->url($path);
 				UploadImage::create([
           'user_id' => $request->user_id,
           'post_id' => $post_id,
@@ -96,9 +98,10 @@ class PostsController extends Controller
 
     if($upload_image) {
       //アップロードされた画像を保存する
-      $path = $upload_image->store('uploads',"public");
+      	$path = Storage::disk('s3')->putFile('uploads_school',$upload_image, 'public');
       //画像の保存に成功したらDBに記録する
       if($path){
+        $path = Storage::disk('s3')->url($path);
         $param = [
           'user_id' => $request->user_id,
           'post_id' => $post_id,

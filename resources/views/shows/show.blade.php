@@ -9,7 +9,7 @@
 
            @if($post->upload_image)
             <div>
-            	<img src="{{ Storage::url($post->upload_image->file_path) }}"  class="mb-4"/>
+            	<img src="{{ $post->upload_image->file_path }}"  class="mb-4"/>
             </div>
            @endif
 
