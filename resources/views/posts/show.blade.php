@@ -140,7 +140,7 @@
 
                           @if($comment->upload_image)
                            <div  class="mt-2">
-                             <img src="{{ Storage::url($comment->upload_image->file_path) }}"/>
+                             <img src="{{ $comment->upload_image->file_path }}"/>
                            </div>
                           @endif
 
